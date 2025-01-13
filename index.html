@@ -34,7 +34,7 @@
           </div>
         </div>
         <!-- Home screen -->
-        <main class="main home-screen" style="display: none">
+        <main class="main home-screen">
           <div
             class="slider-container border border-black rounded-5 p-2 position-relative"
           >
@@ -55,6 +55,7 @@
         <!-- App screen -->
         <main class="app-screen bg-dark p-2" style="display: none">
           <div
+            id="contact"
             class="contact d-flex justify-content-center align-items-center flex-column"
           >
             <i
@@ -65,7 +66,10 @@
         </main>
 
         <!-- contact List -->
-        <main class="contact-list bg-light h-100 p-2">
+        <main class="contact-list bg-light h-100 p-2" style="display: none">
+          <div class="spinner spinner-border position-absolute" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
           <div class="contact-list-container p-2">
             <h3>Contacts</h3>
             <div class="search position-relative d-flex justify-content-center">
@@ -73,45 +77,9 @@
               <input type="text" id="search" />
             </div>
           </div>
+          <div id="user-count">10 Contacts</div>
           <div class="contact-list-accordian p-2">
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree"
-                    aria-expanded="false"
-                    aria-controls="collapseThree"
-                  >
-                    <img
-                      class="rounded-pill"
-                      src="https://randomuser.me/api/portraits/thumb/men/75.jpg"
-                      alt=""
-                    />
-                    <h4 class="fs-4 m-auto" id="contact-name">Mr. abc</h4>
-                  </button>
-                </h2>
-                <div
-                  id="collapseThree"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It
-                    is hidden by default, until the collapse plugin adds the
-                    appropriate classes that we use to style each element. These
-                    classes control the overall appearance, as well as the
-                    showing and hiding via CSS transitions. You can modify any
-                    of this with custom CSS or overriding our default variables.
-                    It's also worth noting that just about any HTML can go
-                    within the <code>.accordion-body</code>, though the
-                    transition does limit overflow.
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="accordion" id="accordionUser"></div>
           </div>
         </main>
       </div>
